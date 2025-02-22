@@ -8,4 +8,4 @@ if not, then install next.js (react framework): `npx create-next-app@latest`
 `pip3 install Django`\
 `pip3 install e- django/`\
 `git clone https://github.com/django/django.git`\
-`pip3 install mysqlclient`\
+`pip3 install mysqlclient`
