@@ -13,6 +13,6 @@ if not, then install next.js (react framework): `npx create-next-app@latest`
 `pip3 install mysqlclient`
 
 ### MySQL
-[mysql download](https://dev.mysql.com/downloads/mysql/8.0.html)\n
-`mysql -u root`\n
+[mysql download](https://dev.mysql.com/downloads/mysql/8.0.html)\
+`mysql -u root`\
 `mysqladmin -u root password [newpassword]`
