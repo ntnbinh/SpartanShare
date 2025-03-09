@@ -15,7 +15,7 @@ export default function Login() {
     <div className="flex h-screen bg-blue-100">
       {/* Please input our logo over here */}
       <div className="w-2/3 flex items-center justify-center">
-        <img src="/logo.jpg" alt="Logo" className="w-500 h-500" />
+        <img src="/logo.jpg" alt="Logo" className="w-[500px] h-[500px]" />
       </div>
       <div className="w-px h-full bg-gray-300"></div>
       <div className="w-1/ p-8 ml-auto mr-auto my-auto">
