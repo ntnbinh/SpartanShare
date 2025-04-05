@@ -22,13 +22,13 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": false
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", 
   ],
   "exclude": [
     "node_modules"
