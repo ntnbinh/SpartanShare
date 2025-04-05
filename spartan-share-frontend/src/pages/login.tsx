@@ -1,42 +1,23 @@
-import React, { useState } from "react";
+"use client";
+
+import React from "react";
+import { useState } from "react";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const data = { email, password };
-
-    try {
-      const response = await fetch("http://localhost:8000/login/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        localStorage.setItem("access_token", result.access_token);
-        localStorage.setItem("refresh_token", result.refresh_token);
-        console.log("login success");
-      } 
-      else {
-        console.log("login failed. try again")
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    console.log("Email:", email);
+    console.log("Password:", password);
   };
 
   return (
     <div className="flex h-screen bg-blue-100">
       {/* Please input our logo over here */}
       <div className="w-2/3 flex items-center justify-center">
-        <img src="/logo.jpg" alt="Logo" className="w-[500px] h-[500px]" />
+        <img src="/logo.jpg" alt="Logo" className="w-[500] h-500" />
       </div>
       <div className="w-px h-full bg-gray-300"></div>
       <div className="w-1/ p-8 ml-auto mr-auto my-auto">
