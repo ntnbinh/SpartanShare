@@ -6,7 +6,7 @@ export default function Profile() {
   );
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       <h2  className="text-6xl font-bold text-blue-700 mb-3 text-center">Edit Profile</h2>
       <hr className="mb-6 border-blue-200"></hr>
 

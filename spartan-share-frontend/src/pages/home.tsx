@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Profile from "../components/profile";
+import MyProjects from "../components/myprojects";
 
 export default function Home() {
   const [selected, setSelected] = useState("profile");
@@ -10,7 +11,7 @@ export default function Home() {
       case "profile":
         return <Profile />;
       case "my-projects":
-        return <div className="text-xl">My Projects content here</div>;
+        return <MyProjects />;
       case "projects":
         return <div className="text-xl">Browse Projects content here</div>;
       case "saved-projects":
