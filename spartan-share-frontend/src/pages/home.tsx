@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="flex h-screen">
       
-      <aside className="w-80 bg-blue-100 flex flex-col justify-between">
+      <aside className="w-96 bg-sky-200 flex flex-col justify-between">
         <div>
 
           <div className="px-6 py-8">
@@ -36,7 +36,7 @@ export default function Home() {
           <nav className="flex flex-col items-center gap-5 px-4">
             <button
               onClick={() => setSelected("profile")}
-              className="w-56 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700"
+              className="w-56 py-2 bg-blue-700 text-white font-bold rounded-md hover:bg-blue-800"
             >Profile</button>
             
             <button
@@ -46,7 +46,7 @@ export default function Home() {
 
             <button
               onClick={() => setSelected("projects")}
-              className="w-56 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700"
+              className="w-56 py-2 bg-blue-700 text-white font-bold rounded-md hover:bg-blue-800"
             >Browse Projects</button>
 
             <button
@@ -56,7 +56,7 @@ export default function Home() {
 
             <button
               onClick={() => setSelected("projects")}
-              className="w-56 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700"
+              className="w-56 py-2 bg-blue-700 text-white font-bold rounded-md hover:bg-blue-800"
             >Applications</button>
           </nav>
         </div>

@@ -19,21 +19,21 @@ export default function Login() {
   };
 
   return (
-    <div className="flex h-screen bg-blue-100">
+    <div className="flex h-screen bg-sky-200">
       {/* Please input our logo over here */}
       <div className="w-2/3 flex items-center justify-center">
         <img src="/logo.jpg" alt="Logo" className="w-500 h-500" />
       </div>
 
-      <div className="w-px h-full bg-gray-300"></div>
+      <div className="w-px h-full bg-gray-600"></div>
 
       <div className="w-1/5 p-8 ml-auto mr-auto my-auto">
-        <h1 className="text-4xl text-center font-bold mb-6">Login</h1>
+        <h1 className="text-5xl text-center font-bold mb-6">Login</h1>
 
         <form onSubmit={handleSubmit}>
           <div>
-            <label className="block text-sm font-medium mb-1">SJSU Email address</label>
-            <div className="relative">
+            <label className="block text-base font-medium mb-1">SJSU Email address</label>
+            <div className="relative mb-3">
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <EnvelopeIcon className="h-5 w-5 text-blue-700"></EnvelopeIcon>
               </span>
@@ -47,8 +47,8 @@ export default function Login() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Enter Password</label>
-            <div className="relative">
+            <label className="block text-base font-medium mb-1">Enter Password</label>
+            <div className="relative mb-1">
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <LockClosedIcon className="h-5 w-5 text-blue-700"></LockClosedIcon>
               </span>
@@ -62,18 +62,20 @@ export default function Login() {
           </div>
 
           <button type="submit" 
-            className="w-full mt-3 p-2 bg-blue-600 border border-gray-400 text-white rounded-md hover:bg-blue-700 font-semibold">Login</button>
+            className="w-full mt-3 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-semibold">Login</button>
           
-          <div className="flex items-center my-4">
-            <hr className="flex-grow border-gray-300"></hr>
-            <span className="px-2 text-black">OR</span>
-            <hr className="flex-grow border-gray-300"></hr>
+          <div className="flex justify-center my-4">
+            <span className="px-2 text-black">--OR--</span>
           </div>
 
-          <button type="button"
+          <p className="text-center mt-4">Don't have an account?{" "}
+            <a href="/signup" className="text-blue-600 underline">Sign up here</a>
+          </p>
+
+          {/* <button type="button"
             onClick={handleSignupRedirect}
-            className="w-full p-2 bg-blue-600 border border-gray-400 text-white rounded-md hover:bg-blue-700 font-semibold"
-            >Create New Account</button>
+            className="w-full p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-semibold"
+            >Create New Account</button> */}
         </form>
       </div>
     </div>
