@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import NewProjectModal from "./newprojectmodal"
 
 const Projects = [
   {
@@ -19,6 +20,7 @@ const Projects = [
 ];
 
 export default function MyProjects() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="">
       <h2 className="text-6xl font-bold text-blue-700 mb-3 text-center">My Projects</h2>
@@ -26,7 +28,8 @@ export default function MyProjects() {
 
       <div className="mb-10 flex justify-start">
         <div className="w-48 h-40 border border-gray-400 rounded-lg flex items-center justify-center 
-                      text-gray-600 font-semibold text-xl hover:shadow cursor-pointer">
+                      text-gray-600 font-semibold text-xl hover:shadow cursor-pointer"
+             onClick={() => setShowModal(true)}>
           + CREATE<br></br>
           NEW<br></br>
           PROJECT
@@ -39,7 +42,7 @@ export default function MyProjects() {
         {Projects.map((project) => (
           <div key={project.id}
           className="w-64 border border-gray-400 rounded shadow-sm">
-            <div className="bg-blue-100 px-2 py-1 text-center font-bold">
+            <div className="bg-sky-200 px-2 py-1 border border-black text-center font-bold">
               {project.title}
             </div>
 
@@ -50,13 +53,14 @@ export default function MyProjects() {
             </div>
 
             <div className="flex justify-between px-3 pb-3">
-              <button className="text-blue-600 hover:underline">Edit</button>
-              <button className="text-red-600 hover:underline">Delete Project</button>
+              <button className="text-blue-600 font-semibold hover:underline">Edit</button>
+              <button className="text-red-600 font-semibold hover:underline">Delete Project</button>
             </div>
           </div>
         ))}
       </div>
 
+      {showModal && <NewProjectModal onClose={() =>setShowModal(false)} />}
     </div>
   )
 }
