@@ -22,9 +22,10 @@ const Projects = [
 export default function MyProjects() {
   const [showModal, setShowModal] = useState(false);
   return (
-    <div className="">
+    // <div className="max-w-6xl mx-auto">
+    <div>
       <h2 className="text-6xl font-bold text-blue-700 mb-3 text-center">My Projects</h2>
-      <hr className="mb-6 border-blue-200"></hr>
+      <hr className="mb-6 border border-blue-200"></hr>
 
       <div className="mb-10 flex justify-start">
         <div className="w-48 h-40 border border-gray-400 rounded-lg flex items-center justify-center 
@@ -37,12 +38,12 @@ export default function MyProjects() {
       </div>
 
       <h3 className="text-2xl font-bold mb-4">My Posted Projects:</h3>
-      
+
       <div className="flex flex-wrap gap-6">
         {Projects.map((project) => (
           <div key={project.id}
-          className="w-64 border border-gray-400 rounded shadow-sm">
-            <div className="bg-sky-200 px-2 py-1 border border-black text-center font-bold">
+            className="w-64 border border-black shadow-sm">
+            <div className="bg-sky-200 px-2 py-1 border-b border-black text-center font-bold">
               {project.title}
             </div>
 
@@ -60,7 +61,7 @@ export default function MyProjects() {
         ))}
       </div>
 
-      {showModal && <NewProjectModal onClose={() =>setShowModal(false)} />}
+      {showModal && <NewProjectModal onClose={() => setShowModal(false)} />}
     </div>
   )
 }

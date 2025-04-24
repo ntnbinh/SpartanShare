@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Profile from "../components/profile";
 import MyProjects from "../components/myprojects";
+import BrowseProjects from "../components/browseprojects";
 
 export default function Home() {
-  const [selected, setSelected] = useState("profile");
+  const [selected, setSelected] = useState("projects");
 
   const renderContent = () => {
     switch (selected) {
       case "profile":
-        return <Profile />;
+        return <Profile></Profile>;
       case "my-projects":
-        return <MyProjects />;
+        return <MyProjects></MyProjects>;
       case "projects":
-        return <div className="text-xl">Browse Projects content here</div>;
+        return <BrowseProjects></BrowseProjects>;
       case "saved-projects":
         return <div className="text-xl">Saved Projects content here</div>;
       case "applications":
