@@ -47,10 +47,19 @@ export default function MyProjects() {
               {project.title}
             </div>
 
-            <div className="p-3 text-sm">
-              <p><span className="font-semibold">Majors:</span> {project.majors.join(", ")}</p>
-              <p><span className="font-semibold">Skills:</span> {project.skills.join(", ")}</p>
-              <p><span className="font-semibold">Duration:</span> {project.duration}</p>
+            <div className="p-3 text-sm space-y-3">
+              <div className="flex">
+                <span className="font-semibold w-20 shrink-0">Majors:</span>
+                <span className="whitespace-pre-wrap">{project.majors.join(", ")}</span>
+              </div>
+              <div className="flex">
+                <span className="font-semibold w-20 shrink-0">Skills:</span>
+                <span className="whitespace-pre-wrap">{project.skills.join(", ")}</span>
+              </div>
+              <div className="flex">
+                <span className="font-semibold w-20 shrink-0">Duration:</span>
+                <span className="whitespace-pre-wrap">{project.duration}</span>
+              </div>
             </div>
 
             <div className="flex justify-between px-3 pb-3">

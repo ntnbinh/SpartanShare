@@ -1,34 +1,41 @@
 import React from "react";
-import { HeartIcon } from "@heroicons/react/24/solid";
 
-const savedProjects = [
+// const postedProjects = [
+//   {
+//     id: 1,
+//     title: "Example Project 1",
+//     majors: ["Computer Science", "Software Engr"],
+//     skills: ["Full stack"],
+//     duration: "6 months",
+//   },
+
+//   {
+//     id: 2,
+//     title: "Example Project 2",
+//     majors: ["Mechanical Engr", "Software Engr"],
+//     skills: ["C++", "C"],
+//     duration: "1 Year",
+//   },
+// ];
+
+const appliedProjects = [
   {
-    id: 1,
-    title: "Example Project 1",
-    majors: ["Computer Science", "Software Engr"],
-    skills: ["Full stack"],
-    duration: "6 months",
-    favorited: true,
+    id: 3,
+    title: "Example Project 3.14159",
+    majors: ["Applied Math"],
+    skills: ["Basic Algebra, Partial Differential Equations"],
+    duration: "2 Years",
   },
+]
 
-  {
-    id: 2,
-    title: "Example Project 2",
-    majors: ["Mechanical Engr", "Software Engr"],
-    skills: ["C++", "C"],
-    duration: "1 Year",
-    favorited: true,
-  },
-];
-
-export default function SavedProjects() {
-  return (
+export default function Applications() {
+  return(
     <div>
-      <h2 className="text-6xl font-bold text-blue-700 mb-3 text-center">Saved Projects</h2>
+      <h2 className="text-6xl font-bold text-blue-700 mb-3 text-center">Applications</h2>
       <hr className="mb-6 border border-blue-200"></hr>
 
       <div className="flex flex-wrap gap-10">
-        {savedProjects.map((project) => (
+        {appliedProjects.map((project) => (
           <div key={project.id}
             className="w-64 border border-black shadow-sm">
             <div className="bg-sky-200 px-2 py-1 border-b border-black text-center font-bold">
@@ -49,12 +56,7 @@ export default function SavedProjects() {
                 <span className="whitespace-pre-wrap">{project.duration}</span>
               </div>
             </div>
-
-            <div className="flex justify-end px-3 pb-3">
-              <HeartIcon className={`h-5 w-5 cursor-pointer ${project.favorited ? "text-red-500" : "text-gray-400"}`}></HeartIcon>
-            </div>
           </div>
-
         ))}
       </div>
     </div>

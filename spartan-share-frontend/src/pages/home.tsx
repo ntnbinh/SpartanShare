@@ -4,6 +4,7 @@ import Profile from "../components/profile";
 import MyProjects from "../components/myprojects";
 import BrowseProjects from "../components/browseprojects";
 import SavedProjects from "../components/savedprojects";
+import Applications from "../components/applications";
 
 export default function Home() {
   const [selected, setSelected] = useState("projects");
@@ -19,7 +20,7 @@ export default function Home() {
       case "saved-projects":
         return <SavedProjects></SavedProjects>;
       case "applications":
-        return <div className="text-xl">Applications content here</div>;
+        return <Applications></Applications>;
       default:
         return <div className="text-xl">*content</div>;
     }
