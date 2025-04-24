@@ -3,6 +3,7 @@ import Link from "next/link";
 import Profile from "../components/profile";
 import MyProjects from "../components/myprojects";
 import BrowseProjects from "../components/browseprojects";
+import SavedProjects from "../components/savedprojects";
 
 export default function Home() {
   const [selected, setSelected] = useState("projects");
@@ -16,7 +17,7 @@ export default function Home() {
       case "projects":
         return <BrowseProjects></BrowseProjects>;
       case "saved-projects":
-        return <div className="text-xl">Saved Projects content here</div>;
+        return <SavedProjects></SavedProjects>;
       case "applications":
         return <div className="text-xl">Applications content here</div>;
       default:
@@ -51,12 +52,12 @@ export default function Home() {
             >Browse Projects</button>
 
             <button
-              onClick={() => setSelected("my-projects")}
+              onClick={() => setSelected("saved-projects")}
               className="w-56 py-2 bg-white text-black font-bold border border-gray-300 rounded-md hover:bg-gray-100"
             >Saved Projects</button>
 
             <button
-              onClick={() => setSelected("projects")}
+              onClick={() => setSelected("applications")}
               className="w-56 py-2 bg-blue-700 text-white font-bold rounded-md hover:bg-blue-800"
             >Applications</button>
           </nav>

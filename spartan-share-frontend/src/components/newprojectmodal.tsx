@@ -33,6 +33,7 @@ export default function NewProjectModal({ onClose }: { onClose: () => void }) {
           <div className="flex justify-between">
             <label className="w-1/4 font-semibold">Graduate Level:</label>
             <select className="w-3/4 border border-black rounded px-2 py-1">
+              <option value="" disabled hidden>Select Level</option>
               <option>Undergrad/Grad</option>
               <option>Undergrad</option>
               <option>Graduate</option>
@@ -42,6 +43,7 @@ export default function NewProjectModal({ onClose }: { onClose: () => void }) {
           <div className="flex justify-between">
             <label className="w-1/4 font-semibold">Majors Wanted:</label>
             <select className="w-3/4  border border-black rounded px-2 py-1">
+              <option value="" disabled hidden>Select Majors</option>
               <option>Computer Science</option>
               <option>Software Engr</option>
               <option>Computer Engr</option>

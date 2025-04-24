@@ -47,7 +47,7 @@ export default function BrowseProjects() {
   return (
     <div>
       <h2 className="text-6xl font-bold text-blue-700 mb-3 text-center">Browse Projects</h2>
-      <hr className="mb-6 border-blue-200"></hr>
+      <hr className="mb-6 border border-blue-200"></hr>
 
       <div className="flex items-center justify-center gap-4 mb-6">
         <input
@@ -80,7 +80,7 @@ export default function BrowseProjects() {
         </select>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-10">
         {dummyProjects.map((project) => (
           <div key={project.id}
             className="w-64 border border-black shadow-sm">

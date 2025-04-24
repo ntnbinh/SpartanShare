@@ -39,7 +39,7 @@ export default function MyProjects() {
 
       <h3 className="text-2xl font-bold mb-4">My Posted Projects:</h3>
 
-      <div className="flex flex-wrap gap-6">
+      <div className="flex flex-wrap gap-10">
         {Projects.map((project) => (
           <div key={project.id}
             className="w-64 border border-black shadow-sm">
