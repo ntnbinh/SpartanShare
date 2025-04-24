@@ -22,7 +22,7 @@ export default function Home() {
       case "applications":
         return <Applications></Applications>;
       default:
-        return <div className="text-xl">*content</div>;
+        return <BrowseProjects></BrowseProjects>;
     }
   };
 
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       </aside>
 
-      <main className="flex-grow p-10 overflow-y-auto bg-white">
+      <main className="flex-grow p-10 overflow-y-auto bg-white relative">
         {renderContent()}
       </main>
     </div>
